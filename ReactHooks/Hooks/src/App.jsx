@@ -4,7 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  let [counter,setCounter]=useState(0)
+  const [counter,setCounter]=useState(0)
   const Add=()=>{
     if(counter<10)
     setCounter(counter+1)
