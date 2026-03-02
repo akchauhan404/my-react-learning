@@ -1,6 +1,6 @@
-export default function Card1() {
+export default function Card1({username,views,btn_text}) {
     return (
-      <div className="md:max-w-sm w-full p-6 rounded-xl shadow-xl bg-black border border-zinc-800 hover:border-white transition-all duration-300 hover:scale-105 group">
+      <div className="max-w-sm w-full mx-auto p-6 rounded-xl shadow-xl bg-black border border-zinc-800 hover:border-white transition-all duration-300 hover:scale-105 group">
         
         <div className="relative overflow-hidden rounded-lg mb-6">
           <img
@@ -18,7 +18,7 @@ export default function Card1() {
             Featured
           </span>
           <h2 className="text-xl font-bold text-white mb-2 group-hover:text-gray-300 transition-colors duration-200">
-            Modern Design Solutions
+            {username}
           </h2>
         </div>
   
@@ -28,8 +28,8 @@ export default function Card1() {
         </p>
   
         <div className="flex items-center justify-between">
-          <button className="px-4 py-2 bg-white hover:bg-gray-200 text-black text-sm rounded-lg transition-colors duration-200">
-            Learn More
+          <button className="px-4 py-2 bg-green-500 hover:bg-white text-black text-sm rounded-lg transition-colors duration-200">
+            {btn_text}
           </button>
   
           <div className="flex items-center space-x-1 text-xs text-gray-500">
@@ -41,7 +41,7 @@ export default function Card1() {
                 clipRule="evenodd"
               />
             </svg>
-            <span>234 views</span>
+            <span>{views} views</span>
           </div>
         </div>
       </div>
