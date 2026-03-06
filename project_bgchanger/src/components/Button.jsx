@@ -1,5 +1,4 @@
-function Button({ color }) {
-
+function Button({ color,onClick }) {
     const colorVariants = {
       red: "bg-red-500 hover:bg-red-600",
       blue: "bg-blue-500 hover:bg-blue-600",
@@ -10,11 +9,11 @@ function Button({ color }) {
   
     return (
       <button
-        className={`px-4 py-2 text-white rounded-md transition ${colorVariants[color]}`}
+        className={`min-w-24 px-4 py-2 text-white rounded-xl shadow-md hover:shadow-lg transition ${colorVariants[color]}`}
+        onClick={onClick}
       >
         {color}
       </button>
     );
   }
-  
   export default Button;
